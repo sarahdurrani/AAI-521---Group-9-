@@ -1,4 +1,5 @@
-Project Title : Endanger Detect
+Project Title: Endanger Detect
+--------
 
 This project is a part of the AAI-521 course in the Applied Artificail Intelligence Program at the University of San Diego (USD).
 
