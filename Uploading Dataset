@@ -1,0 +1,45 @@
+###Uploading Dataset using Kaggle API keys 
+
+import os
+import shutil
+
+# Step 1: Create .kaggle directory
+print("Creating .kaggle directory...")
+os.makedirs(os.path.expanduser("~/.kaggle"), exist_ok=True)
+print("Directory created successfully!")
+
+# Step 2: Move the Kaggle API key file
+print("Moving Kaggle API key file...")
+source = "/content/DATASET/UPLOADING DATASET/kaggle.json"
+destination = os.path.expanduser("~/.kaggle/kaggle.json")
+if os.path.exists(source):
+    shutil.move(source, destination)
+    print("Kaggle API key moved successfully!")
+else:
+    print("ERROR: kaggle.json not found!")
+
+# Step 3: Set permissions
+print("Setting permissions for Kaggle API key...")
+os.chmod(destination, 0o600)
+print("Permissions set successfully!")
+
+# Step 4: Install Kaggle library
+print("Installing Kaggle library...")
+!pip install kaggle
+
+# Step 5: Download the dataset
+print("Downloading dataset from Kaggle...")
+result = !kaggle datasets download -d mikoajfish99/marine-animal-images
+print("\n".join(result))
+
+# Step 6: Unzip the dataset
+print("Unzipping dataset...")
+!unzip marine-animal-images.zip -d marine_animal_dataset
+print("Dataset unzipped successfully!")
+
+# Step 7: List dataset contents
+print("Contents of the dataset directory:")
+!ls marine_animal_dataset
+
+
+
