@@ -20,10 +20,15 @@ def load_wwf_data(csv_path):
 # Get conservation status
 def get_conservation_status(species, wwf_data):
     """
-    Return the conservation status of a species from the WWF dataset.
+    Returns the conservation status of the species from the WWF dataset.
+    If the species is not in the WWF list, return 'Not Endangered'.
     """
     status = wwf_data[wwf_data['COMMON NAME'] == species.lower().strip()]['CONSERVATION STATUS'].values
-    return status[0] if len(status) > 0 else "Unknown"
+    if len(status) > 0:
+        return status[0]
+    else:
+        return "Not Endangered"
+
 
 # Main Streamlit app
 def main():
