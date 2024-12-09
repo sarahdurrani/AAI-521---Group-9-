@@ -11,6 +11,21 @@ Installation:
 How is it be used?
 Installed?
 Run?
+Before running the code use the links and steps below to download the datasets. 
+## Large Files for Endanger Detect
+
+Due to GitHub's file size limitations, the following files are hosted on Google Drive. You can download them using the links below:
+
+- **Dataset (marine-animal-images.zip):** [Download here](https://drive.google.com/file/d/1zpF7kedXrpwEz46kcKfMzO1T0YczFRdI/view?usp=share_link)
+- **Trained Model (marine_animal_model.h5):** [Download here](https://drive.google.com/file/d/1QQ1w0CzTR1HDmZwTWjPqPgIxT0ygIpmP/view?usp=share_link)
+
+### Instructions
+
+1. Download the files using the links above.
+2. Extract the dataset and place it in the `DATASET` directory of the project.
+3. Place the trained model file in the root directory of the project or update the code to point to its location.
+
+
 
 
 Project Introduction:
